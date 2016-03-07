@@ -8,6 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:background="#ff0">
+        <!--下面这个就是首行了-->
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+
+
         <!--这个图片可以用viewPager来替代-->
         <ImageView
             android:layout_width="match_parent"
