@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TestScrollingActivity">
+    <TextView
+        android:id="@+id/depentent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#FFFF0000"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_gravity="top|left"
+        android:text="depentent"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#FF00FF00"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_gravity="top|right"
+        app:layout_behavior="com.sky.coordinatorlayoutbehavior.TestScrollingBehavior"
+        android:text="auto"/>
+
+</android.support.design.widget.CoordinatorLayout>

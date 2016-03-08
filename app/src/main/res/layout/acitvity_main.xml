@@ -1,49 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:background="#ff0">
-        <!--下面这个就是首行了-->
+        android:background="@android:color/holo_green_light"
+        app:layout_behavior="com.sky.coordinatorlayoutbehavior.behavior.SearchBehaviorTest">
         <ImageView
+            android:id="@+id/icon"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
             android:src="@mipmap/ic_launcher"
             android:layout_width="48dp"
             android:layout_height="48dp"/>
 
-
-        <!--这个图片可以用viewPager来替代-->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
         <TextView
-            android:text="我要搜索的游戏"
-            android:padding="10dp"
-            android:background="#8000"
-            android:textColor="#fff"
-            android:layout_alignParentBottom="true"
+            android:id="@+id/search"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="#8000"
+            android:gravity="center_vertical"
+            android:text="我要搜索的游戏"
+            android:textColor="#fff"/>
     </RelativeLayout>
 
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/second"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_marginTop="180dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--<android.support.v4.widget.NestedScrollView
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp">
 
         <TextView
             style="@style/TextAppearance.AppCompat.Display3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
             android:background="@android:color/holo_red_light"
             android:text="@string/text_for_test"/>
-    </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.NestedScrollView>-->
 </android.support.design.widget.CoordinatorLayout>
